@@ -17,7 +17,7 @@ public class SpielController {
     
     @GetMapping("/spiel")
     public String showSpiel(@RequestParam(name="activePage", required = false, defaultValue = "spiel") String activePage, Model model){ 
-        model.addAttribute("activePage", "spiel");
+        model.addAttribute("activePage", "spiel"); //model wird zum hmtl transportiert (wichtig für z.B. for-each Schleifen)
         return "index.html";
     }
     @GetMapping("/start")
